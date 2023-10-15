@@ -117,3 +117,16 @@ ion-note {
 ion-item.selected {
   --color: var(--ion-color-primary);
 }
+
+.image-group {
+  text-align: center;
+}
+
+.image-group img {
+  width: 50%; /* Adjust the width as a percentage of the parent container */
+  max-width: 200px; /* Optional: Set a maximum width to prevent the image from getting too large */
+  height: auto; /* Maintain the image's aspect ratio */
+  display: block; /* Remove any potential spacing underneath the image */
+  margin: 0 auto; /* Center the image horizontally */
+}
+

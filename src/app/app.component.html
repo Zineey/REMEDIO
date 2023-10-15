@@ -2,8 +2,11 @@
     <ion-menu contentId="main-content" type="overlay">
       <ion-content>
         <ion-list id="inbox-list">
-          <ion-list-header>LOGO</ion-list-header>
-          <ion-note>REMEDIO</ion-note>
+          <!-- <ion-list-header>LOGO</ion-list-header> -->
+          <div class="image-group">
+            <img src="../assets/icon/favicon.png" alt="REMEDIO">
+            <ion-note>REMEDIO</ion-note>
+          </div>
 
           <ion-menu-toggle auto-hide="false">
             <ion-item routerDirection="root" [routerLink]="['client/index']" lines="none" detail="false" routerLinkActive="selected">
