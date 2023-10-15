@@ -1,0 +1,7 @@
+{
+  "name": "REMEDIO",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
