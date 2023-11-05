@@ -28,6 +28,10 @@ const routes: Routes = [
     path: 'client/plant',
     loadChildren: () => import('./client-components/plant/plant.module').then( m => m.PlantPageModule)
   },
+  {
+    path: 'quest',
+    loadChildren: () => import('./client-components/quest/quest.module').then( m => m.QuestPageModule)
+  },
 ];
 
 @NgModule({

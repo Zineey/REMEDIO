@@ -3,10 +3,77 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>Badges</ion-title>
+    <ion-title>REMEDIO</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
+  <ion-card class="reminder-head">
+    <ion-card-header>
+      <ion-card-title><h4>Badges</h4></ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-grid [fixed]="true">
+    <ion-row>
+      <ion-col 
+        size="12" size-xs="4" size-sm="5" size-md="4" size-lg="2" class="ion-text-center"
+        *ngFor="let i of [].constructor(10)">
+
+        <ion-card class="badge-container" >
+          <div class="badge-container-top">
+            <img alt="badge Profile" src="../../assets/Badges/welcome_badge.png"/>
+          </div>
+          <div class="badge-container-bottom">
+            <ion-card-header>
+              <ion-card-title><h6>Welcome Badge</h6></ion-card-title>
+            </ion-card-header>  
+            <ion-button (click)="setOpen(true)" color="medium" size="small" >
+              <p>View Details</p>
+            </ion-button>
+          </div>
+        </ion-card>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+
+
+    <ion-modal [isOpen]="isModalOpen">
+      <ng-template>
+        <ion-header>
+          <ion-toolbar>
+            <ion-title color="primary">View badge</ion-title>
+            <ion-buttons slot="end">
+              <ion-button (click)="setOpen(false)">Close</ion-button>
+            </ion-buttons>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content class="ion-padding">
+          <div class="view-meds-container">
+            
+            <div class="view-meds-row-1">
+              <ion-card class="view-meds-col-1-img">
+                <img src="../../assets/Badges/welcome_badge.png" alt="REMEDIO">
+              </ion-card>
+  
+              <div class="view-meds-col-2-details">
+                <ion-item>
+                  <ion-label><h2>Badge Name</h2></ion-label>
+                </ion-item>
+                <ion-item>
+                  <ion-label><h2>Description</h2></ion-label>
+                </ion-item>
+                <ion-item>
+                  <ion-label><h2>Status</h2></ion-label>
+                </ion-item>
+              </div>
+            </div>
+  
+          </div>
+        </ion-content>
+      </ng-template>
+    </ion-modal>
 
 </ion-content>

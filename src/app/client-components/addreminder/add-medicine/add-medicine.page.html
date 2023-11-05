@@ -1,0 +1,52 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title color="primary">Add Medicine</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card class="reminder-head">
+    <ion-card-header>
+      <ion-card-title><h6>Let's start by simply adding the necessary information below.</h6></ion-card-title>
+      <ion-fab horizontal="end" vertical="center">
+        <ion-fab-button (click)="goBack()" size="small" color="primary">
+          <ion-icon name="arrow-back-circle-outline"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
+    </ion-card-header>
+  </ion-card>
+  
+  <ion-card>
+    <ion-card-content>
+      <ion-item>
+        <ion-input label="Medicine name:" [(ngModel)]="meds_name" labelPlacement="floating" placeholder="Enter text" [clearInput]="true" maxLength=40></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="number" label="Dosage(mg):" [(ngModel)]="meds_dosage" labelPlacement="floating" placeholder="Enter a number" [clearInput]="true" maxLength=40></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-select label="Medicine Type:" [(ngModel)]="meds_type" label-placement="floating">
+          <ion-select-option value="tablet">Tablet</ion-select-option>
+          <ion-select-option value="bottle">Bottle</ion-select-option>
+          <ion-select-option value="injectable">Injectable</ion-select-option>
+        </ion-select>
+      </ion-item>
+      
+      <ion-item>
+        <!-- For editing - date interval -->
+        <ion-input label="Interval:" [(ngModel)]="meds_interval" labelPlacement="floating" placeholder="Enter text" [clearInput]="true" maxLength=40></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input label="Start time:" type="time" [(ngModel)]="meds_start_time" labelPlacement="floating" placeholder="Enter text" [clearInput]="true" maxLength=40></ion-input>
+      </ion-item>
+      <div class="meds_form_btn">
+        <ion-button (click)="add_med_reminder()" color="primary" size="full" shape="round">Confirm</ion-button>
+        <ion-button  routerLink="../" color="primary" size="full" fill="clear">Go back</ion-button>
+      </div>
+      
+    </ion-card-content>
+    
+  </ion-card>
+ 
+</ion-content>

@@ -1,0 +1,62 @@
+
+.badge-container{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    margin:0;
+}
+.badge-container-bottom{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    // background-color: aqua;
+}
+.badge-container-bottom p{
+    size: 10px;
+}
+.badge-container-top{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    // background-color: red;
+}
+
+// modal
+.view-meds-container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.view-meds-row-1{
+    display: flex;
+    width: 100%;
+    height: 40%;
+}
+.view-meds-col-1-img{
+    display: flex;
+    width: 40%;
+    justify-content: center;
+    align-items: center;
+    // background-color: aqua;
+}
+.view-meds-row-1-img img{
+    display: flex;
+    width:150px;
+}
+.view-meds-col-2-details{
+    display: flex;
+    width: 60%;
+    padding: 5px;
+    justify-content: center;
+    // background-color: aquamarine;
+    flex-direction: column;
+}
+.view-meds-row-2{
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    width: 100%;
+    height: 60%;
+}

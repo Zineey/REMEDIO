@@ -1,12 +1,108 @@
+
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>Add Reminder</ion-title>
+    <ion-title>REMEDIO</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
 
+  <!-- Head Title -->
+  <ion-card class="head-container">
+    <ion-card-header class="wrapper">
+      <div class="head_title">
+        <ion-card-title><h4>Medicine Reminders</h4></ion-card-title>
+      </div>
+      <div class="head_buttons">
+        <ion-button fill="outline" color="medium" (click)="view_add_medicine_form()">
+          <ion-icon name="calendar"></ion-icon>
+        </ion-button>
+        <ion-button (click)="view_add_medicine_form()">
+          <ion-icon name="add-outline"></ion-icon>
+        </ion-button>
+      </div>
+    </ion-card-header>
+  </ion-card>
+  
+  <ion-grid [fixed]="true">
+
+    <ion-row>
+      <ion-col (click)="setOpen(true)"
+        size="12" size-xs="12" size-sm="6" size-md="4" size-lg="3" 
+        *ngFor="let i of [].constructor(20)">
+        
+        
+        <ion-card class="med-container">
+          <div class="med-container-left-col">
+            <ion-card-header>
+              <ion-card-title><h5>Medicine Name</h5></ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <!-- temporary till data connection is done -->   
+              <h6>10:00 a.m. - Everyday</h6>       
+            </ion-card-content>
+          </div>
+
+          <div class="med-container-right-col">
+            <ion-icon name="create-outline"  size="large" color="secondary"></ion-icon>
+            <ion-icon name="trash-outline" size="large" color="danger"></ion-icon>
+          </div>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+
+  </ion-grid>
+  <!--View Medicine reminder information -->
+  <ion-modal [isOpen]="isModalOpen">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title color="primary">View Medicine</ion-title>
+          <ion-buttons slot="end">
+            <ion-button (click)="setOpen(false)">Close</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding">
+        <div class="view-meds-container">
+          
+          <div class="view-meds-row-1">
+            <ion-card class="view-meds-col-1-img">
+              <img src="../../assets/icon/favicon.png" alt="REMEDIO">
+            </ion-card>
+
+            <div class="view-meds-col-2-details">
+              <ion-item>
+                <ion-label><h2>Medicine Name</h2></ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label><h2>Dosage</h2></ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label><h2>Type</h2></ion-label>
+              </ion-item>
+              
+              <!-- <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p> -->
+            </div>
+          </div>
+
+          <div class="view-meds-row-2">
+            <ion-item>
+              <ion-label><h2>Interval</h2></ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label><h2>Time</h2></ion-label>
+            </ion-item>
+          </div>
+        </div>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
 </ion-content>
+
+
+
