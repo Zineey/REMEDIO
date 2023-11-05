@@ -7,7 +7,11 @@ const routes: Routes = [
   {
     path: '',
     component: AddreminderPage
-  }
+  },
+  {
+    path: 'add-medicine',
+    loadChildren: () => import('./add-medicine/add-medicine.module').then( m => m.AddMedicinePageModule)
+  },
 ];
 
 @NgModule({

@@ -3,10 +3,43 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>Virtual Plants</ion-title>
+    <ion-title>REMEDIO</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
+  <ion-card class="reminder-head">
+    <ion-card-header>
+      <ion-card-title><h4>Virtual Plant</h4></ion-card-title>
+    </ion-card-header>
+  </ion-card>
+  <ion-grid [fixed]="true">
+    <ion-card>
+      <ion-row>
+        <ion-col class="plant-page-container" size="12"  size-xs="12" size-sm="6" size-md="4" size-lg="6">
+          <div class="plant-page-left-col">
+            <img alt="remedio plant" src="../../assets/Plants/beginner_plant.png" width="450px">
+          </div>
+        </ion-col>
+  
+        <ion-col class="plant-page-container" size="12"  size-xs="12" size-sm="6" size-md="4" size-lg="6">
+          <div class="plant-page-right-col">
+            <h3>Quest</h3>
+            <ion-grid>
+              <ion-row>
+                <!-- Quest Cards -->
+                
+                <ion-col size="12"  size-xs="6" size-sm="6" size-md="4" size-lg="4" *ngFor="let i of [].constructor(4)">
+                  <ion-card >
+                    <img alt="remedio plant" src="../../assets/icon/favicon.png" max-width="450px">
+                  </ion-card>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  </ion-grid>
 
 </ion-content>

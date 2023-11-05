@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./badges.page.scss'],
 })
 export class BadgesPage implements OnInit {
+  isModalOpen = false;
 
   constructor() { }
 
   ngOnInit() {
   }
-
+  setOpen(isOpen: boolean) {
+    this.isModalOpen = isOpen;
+  }
 }

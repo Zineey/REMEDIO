@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-addguardian',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddguardianPage implements OnInit {
 
-  constructor() { }
+  isModalOpen = false;
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit() {
   }
 
+  view_guardian_details(){
+    this.router.navigateByUrl("..")
+  }
+  setOpen(isOpen: boolean) {
+    this.isModalOpen = isOpen;
+  }
 }
